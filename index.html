@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="月云了桌宠 Windows 测试版官方下载页。">
+  <meta name="theme-color" content="#241932">
+  <title>月云了桌宠 · 下载</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="brand-mark">
+        <img src="icon.png" alt="紫色 99 图标" width="118" height="118">
+      </div>
+
+      <p class="eyebrow">WINDOWS 桌面宠物</p>
+      <h1 id="page-title">月云了</h1>
+      <p class="tagline">他只是暂时住在你的桌面上。</p>
+
+      <div class="release-line" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="release-version">v0.1.0-beta.1</span>
+        <span class="release-label">朋友测试版</span>
+      </div>
+
+      <div class="downloads">
+        <a
+          class="download-button primary"
+          id="setup-download"
+          href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.1/Tsukumo99-Setup.exe"
+        >
+          <span class="button-title">下载安装版</span>
+          <span class="button-meta">推荐 · Windows 10 / 11</span>
+        </a>
+
+        <a
+          class="download-button secondary"
+          id="portable-download"
+          href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.1/Tsukumo99-Portable.zip"
+        >
+          <span class="button-title">下载免安装版</span>
+          <span class="button-meta">解压后直接运行</span>
+        </a>
+      </div>
+
+      <div class="feature-row" aria-label="主要功能">
+        <span>台词工坊</span>
+        <span>闹钟与计时器</span>
+        <span>数据仅存本地</span>
+      </div>
+    </section>
+
+    <section class="notice" aria-labelledby="notice-title">
+      <div class="notice-icon" aria-hidden="true">!</div>
+      <div>
+        <h2 id="notice-title">下载前请知道</h2>
+        <p>
+          当前是未签名测试版，Windows 可能提示“未知发布者”。
+          请只从本页下载，不要为了运行它而关闭安全软件。
+        </p>
+      </div>
+    </section>
+
+    <section class="small-print" aria-label="其他说明">
+      <p>台词、提醒、设置和日志默认仅保存在你的电脑中，不会自动上传。</p>
+      <a href="https://github.com/lzl2lzl/tsukumo99-download/releases" rel="noreferrer">查看历史版本</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>个人制作的非官方同人测试作品 · 请勿用于商业销售</p>
+  </footer>
+
+  <script>
+    const repository = 'lzl2lzl/tsukumo99-download';
+    const assetNames = {
+      setup: 'Tsukumo99-Setup.exe',
+      portable: 'Tsukumo99-Portable.zip',
+    };
+
+    fetch(`https://api.github.com/repos/${repository}/releases?per_page=10`, {
+      headers: { Accept: 'application/vnd.github+json' },
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('release unavailable');
+        return response.json();
+      })
+      .then((releases) => {
+        const latest = releases.find((release) => !release.draft);
+        if (!latest) return;
+        document.getElementById('release-version').textContent = latest.tag_name;
+        const setup = latest.assets.find((asset) => asset.name === assetNames.setup);
+        const portable = latest.assets.find((asset) => asset.name === assetNames.portable);
+        if (setup) document.getElementById('setup-download').href = setup.browser_download_url;
+        if (portable) document.getElementById('portable-download').href = portable.browser_download_url;
+      })
+      .catch(() => {
+        // 保留 HTML 中的当前版本备用链接。
+      });
+  </script>
+</body>
+</html>
