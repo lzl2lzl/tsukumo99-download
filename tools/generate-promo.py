@@ -68,7 +68,7 @@ def render(width: int, height: int, output: str) -> None:
     title_font = font(round(58 * scale), True)
     draw.multiline_text((margin, round(274 * scale)), "现在，他也\n住进 Mac 了。", font=title_font, fill="#fffaf0", spacing=round(10 * scale))
     draw.text((margin, round(438 * scale)), "会陪你，也会在该休息的时候来管你。", font=font(round(20 * scale)), fill="#cbbfd7")
-    draw.text((margin, height - round(76 * scale)), "v0.1.0-beta.3  ·  朋友测试版", font=font(round(15 * scale)), fill="#8f809d")
+    draw.text((margin, height - round(76 * scale)), "v0.1.0-beta.3  ·  Windows + macOS", font=font(round(15 * scale)), fill="#8f809d")
 
     stage = (round(700 * scale), round(60 * scale), width - margin, height - round(48 * scale))
     shadow = Image.new("RGBA", image.size, (0, 0, 0, 0))

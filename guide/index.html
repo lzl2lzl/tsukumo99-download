@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#17111f">
   <title>月云了桌宠 · 使用说明</title>
   <link rel="icon" href="../icon.png">
-  <link rel="stylesheet" href="docs.css?v=20260904-2">
+  <link rel="stylesheet" href="docs.css?v=20260904-3">
 </head>
 <body>
   <!--
@@ -125,17 +125,28 @@
       <div class="platform-guide" id="guide-panel-windows" role="tabpanel" aria-labelledby="guide-tab-windows" data-platform-panel="windows">
         <ol class="install-path">
           <li><span>下载</span><p>去下载页选择“Windows 安装版”。不想安装时可以选免安装 ZIP。</p></li>
-          <li><span>安装</span><p>运行安装文件，跟着电脑上的提示完成。只从本站下载，不要为了运行而关闭安全软件。</p></li>
+          <li><span>安装</span><p>运行安装文件，跟着电脑上的提示完成。若出现系统安全提示，先按下方说明核对来源。</p></li>
           <li><span>找到入口</span><p>看屏幕右下角通知区域。没看到紫色 99 时先点“^”展开隐藏图标，找到后对它点右键。</p></li>
         </ol>
+        <aside class="plain-note install-safety" aria-label="Windows 未签名安装包安全说明">
+          <p><strong>为什么显示“未知发布者”？</strong>当前安装包还没有使用 Windows 认可的开发者签名，所以系统无法核实作者身份。这个提示本身不等于检测到了病毒。</p>
+          <p><strong>你需要知道的风险</strong>未签名文件如果被别人修改或重新打包，Windows 很难替你确认它仍是作者发布的原文件。只从本站下载页的按钮获取；不要使用群文件、网盘或转载页面里的副本，也不要为了安装而关闭安全软件。</p>
+          <p><strong>确认来源后怎样打开</strong>若看到“Windows 已保护你的电脑”，可以选择“更多信息”，确认这是你刚从本站下载的月云了安装文件，再选择“仍要运行”。如果安全软件明确报告恶意程序，或者下载地址不对，请停止安装。</p>
+        </aside>
         <a class="action primary" href="../?platform=windows#download">去下载 Windows 版</a>
       </div>
       <div class="platform-guide" id="guide-panel-macos" role="tabpanel" aria-labelledby="guide-tab-macos" data-platform-panel="macos" hidden>
         <ol class="install-path">
           <li><span>下载</span><p>去下载页选择“macOS 通用版”。同一个包可以用于 Apple 芯片和 Intel Mac。</p></li>
-          <li><span>安装</span><p>打开 DMG，把“月云了桌宠”拖进“应用程序”。若首次打开被拦截，请按下载页的安全提示操作。</p></li>
+          <li><span>安装</span><p>打开 DMG，把“月云了桌宠”拖进“应用程序”。第一次打开时，macOS 可能会先阻止它运行。</p></li>
           <li><span>找到入口</span><p>看屏幕右上角菜单栏，在 Wi-Fi、电量和时间附近找到黑白 99，右键它；触控板用两指点按。</p></li>
         </ol>
+        <aside class="plain-note install-safety" aria-label="macOS 未签名安装包安全说明">
+          <p><strong>为什么显示“无法验证开发者”？</strong>当前安装包还没有使用 Apple Developer ID 签名和公证，所以 macOS 无法核实作者，也无法替你确认文件发布后没有被改动。这个提示本身不等于检测到了病毒。</p>
+          <p><strong>你需要知道的风险</strong>选择“仍要打开”会让这一个未经 Apple 验证的 App 运行。只从本站下载页的按钮获取；不要使用群文件、网盘或转载页面里的副本，也不要关闭系统的整体安全保护。</p>
+          <p><strong>确认来源后怎样打开</strong>先在“应用程序”中尝试打开一次并关闭提示；再进入“苹果菜单 → 系统设置 → 隐私与安全性”，向下找到安全性提示，选择“仍要打开”，输入电脑登录密码并确认。macOS 12 中对应位置叫“系统偏好设置 → 安全性与隐私”。</p>
+          <p><strong>这些情况不要继续</strong>如果提示明确写着 App 会损坏电脑、包含恶意软件，或者文件已经损坏，请停止打开并联系作者；不要在终端运行关闭系统安全保护的命令。</p>
+        </aside>
         <a class="action primary" href="../?platform=macos#download">去下载 macOS 版</a>
       </div>
     </section>

@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="月云了桌宠朋友测试版，现已支持 Windows 10/11 与 macOS 12 及以上版本。">
+  <meta name="description" content="月云了桌宠下载与产品文档，支持 Windows 10/11 与 macOS 12 及以上版本。">
   <meta name="theme-color" content="#17111f">
   <meta property="og:type" content="website">
   <meta property="og:title" content="月云了桌宠 · Windows 与 macOS">
-  <meta property="og:description" content="他只是暂时住在你的桌面上。下载 Windows 或 macOS 朋友测试版。">
+  <meta property="og:description" content="他只是暂时住在你的桌面上。下载 Windows 或 macOS 版本，查看完整产品文档。">
   <meta property="og:image" content="https://lzl2lzl.github.io/tsukumo99-download/social-preview.png">
   <meta property="og:url" content="https://lzl2lzl.github.io/tsukumo99-download/">
   <title>月云了桌宠 · Windows 与 macOS 下载</title>
@@ -32,7 +32,7 @@
         <div class="release-line" aria-live="polite">
           <span class="status-dot" aria-hidden="true"></span>
           <span id="release-version">v0.1.0-beta.3</span>
-          <span>朋友测试版</span>
+          <span>Windows + macOS</span>
         </div>
         <h1 id="page-title">现在，他也住进 Mac 了。</h1>
         <p class="tagline">会说话、会闹脾气，也会在该休息的时候来管你。Windows 与 macOS 使用同一套月云了、台词和提醒体验。</p>
@@ -95,8 +95,8 @@
     <section class="notice" aria-labelledby="notice-title">
       <div class="notice-mark" aria-hidden="true">!</div>
       <div>
-        <h2 id="notice-title">这是未签名的朋友测试版</h2>
-        <p id="security-copy">Windows 可能提示“未知发布者”。请先核对下载地址，不要为了运行来源不明的文件而关闭安全软件。</p>
+        <h2 id="notice-title">下载前请先了解：当前安装包未签名</h2>
+        <p id="security-copy">当前 Windows 安装包暂未使用系统认可的开发者签名，Windows 可能显示“未知发布者”。这不等于已经检测到病毒，但系统无法核验作者身份；只从本站下载，地址不对或安全软件明确报警时请勿运行。</p>
       </div>
     </section>
 
@@ -138,7 +138,7 @@
     const platformContent = {
       windows: {
         note: '适用于 64 位 Windows 10 / 11。',
-        security: 'Windows 可能提示“未知发布者”。请先核对下载地址，不要为了运行来源不明的文件而关闭安全软件。',
+        security: '当前 Windows 安装包暂未使用系统认可的开发者签名，Windows 可能显示“未知发布者”。这不等于已经检测到病毒，但系统无法核验作者身份；只从本站下载，地址不对或安全软件明确报警时请勿运行。',
         steps: [
           '下载并运行 Windows 安装版。',
           '完成引导后，他会出现在桌面和任务栏右下角。',
@@ -147,10 +147,10 @@
       },
       macos: {
         note: '适用于 macOS 12 及以上版本；一个包同时支持 Apple 芯片与 Intel Mac。',
-        security: 'macOS 首次打开可能被阻止。请在“应用程序”中按住 Control 点击“月云了桌宠”，选择“打开”，再在确认框中选择“打开”。不需要关闭系统安全功能。',
+        security: '当前 macOS 安装包暂未使用 Apple Developer ID 签名和公证，系统可能显示“无法验证开发者”。这不等于已经检测到病毒，但 macOS 无法核验作者及文件是否在发布后被改动；请确认下载来源后再按使用说明打开。',
         steps: [
           '打开 DMG，把“月云了桌宠”拖进“应用程序”。',
-          '首次打开若被拦截，按住 Control 点击应用并选择“打开”。',
+          '首次打开若被拦截，先按上方提示核对来源，再到正式产品文档查看对应系统的打开步骤。',
           '运行后从屏幕右上角的黑白 99 图标进入设置或找回他。',
         ],
       },
