@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'">
+  <meta name="description" content="月云了桌宠完整功能手册：每个动作怎样触发、会看到什么、功能在哪里设置。">
+  <meta name="theme-color" content="#17111f">
+  <title>月云了桌宠 · 完整功能手册</title>
+  <link rel="icon" href="../icon.png">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body class="manual-page">
+  <!--
+  THESIS: 所有功能都以“你做什么 → 他怎样回应”解释，拒绝按软件内部名称堆成目录。
+  OWN-WORLD: 深紫阅读面、奶白正文、紫色动作标记与角色表情；长文用边栏、速查条和纵向触发清单保持方向感。
+  STORY: 读者先用速查定位，再顺着一次动作看见完整升级过程，最后知道设置入口、数据安全和恢复方式。
+  FIRST VIEWPORT: 左侧固定“我想做什么”目录，右侧用大标题和七条速查回答最常见问题，搜索就在标题旁。
+  FORM: 动作反应手册，结构候选第 5 项；详细页采用可搜索的触发索引与连续行为说明，seed e14ae2bf。
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <header class="docs-header">
+    <a class="docs-identity" href="../" aria-label="返回月云了桌宠下载页">
+      <img src="../icon.png" width="42" height="42" alt="">
+      <span><strong>月云了</strong><small>产品文档</small></span>
+    </a>
+    <nav class="docs-nav" aria-label="产品文档导航">
+      <a href="./">快速开始</a>
+      <a class="active" href="features.html" aria-current="page">完整功能</a>
+      <a href="../#download">下载</a>
+    </nav>
+  </header>
+
+  <main class="manual-shell">
+    <aside class="manual-rail" aria-label="功能目录">
+      <p>我想知道</p>
+      <nav>
+        <a href="#click">点他会怎样</a>
+        <a href="#drag">怎样移动和拎起</a>
+        <a href="#menu">右键菜单有什么</a>
+        <a href="#life">他会自己做什么</a>
+        <a href="#reminders">怎样让他提醒我</a>
+        <a href="#dialogue">怎样修改台词</a>
+        <a href="#settings">设置和数据在哪里</a>
+        <a href="#trouble">找不到或出问题</a>
+      </nav>
+      <a class="rail-start" href="./">回到快速开始</a>
+    </aside>
+
+    <div class="manual-content">
+      <section class="manual-intro" aria-labelledby="manual-title">
+        <div>
+          <h1 id="manual-title">你做什么，他就怎么回应。</h1>
+          <p>不用通读。按目录里的动作跳过去，或者搜索“睡觉”“提醒”“台词”这样的词。</p>
+        </div>
+        <label class="doc-search">
+          <span>搜索功能</span>
+          <input id="feature-search" type="search" placeholder="例如：睡觉、葡萄、闹钟" autocomplete="off">
+        </label>
+      </section>
+      <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
+
+      <section class="quick-answer" aria-labelledby="quick-answer-title">
+        <h2 id="quick-answer-title">30 秒速查</h2>
+        <div class="quick-answer-list">
+          <a href="#click"><strong>轻点一下</strong><span>听他说当前活动的下一句</span></a>
+          <a href="#click"><strong>快速连点</strong><span>躲开 → 回嘴 → 生气</span></a>
+          <a href="#drag"><strong>按住拖动</strong><span>把他搬到桌面别处</span></a>
+          <a href="#menu"><strong>右键点击</strong><span>打开睡觉、提醒等日常功能</span></a>
+          <a href="#reminders"><strong>🌙 月亮按钮</strong><span>打开闹钟与计时器</span></a>
+          <a href="#settings"><strong>找不到他</strong><span>从 99 图标移回屏幕中央</span></a>
+          <a href="#dialogue"><strong>想改台词</strong><span>从 99 图标打开台词工坊</span></a>
+        </div>
+      </section>
+
+      <section class="manual-section" id="click" data-search-section>
+        <header><h2>点他：从搭话到把他惹毛</h2><p>关键不是点了多少下，而是你点得急不急。</p></header>
+        <div class="reaction-chain">
+          <article><span>隔一会儿轻点</span><strong>他会说下一句</strong><p>如果他正在看电视、玩手机或唱歌，会先说那件事相关的台词。正在显示的气泡会直接换成新一句。</p></article>
+          <article><span>短时间快速连点</span><strong>他先往旁边躲</strong><p>前几次不会回嘴，只会慢慢避开你的鼠标。</p></article>
+          <article><span>还不停手</span><strong>开始嫌你烦</strong><p>躲够以后他会站住，表情变得不耐烦，并隔一会儿回你一句。</p></article>
+          <article><span>一直连续点</span><strong>彻底吵起来</strong><p>回嘴会越来越凶，动作也会进入明显的生气状态。停下来让他缓一缓，怒气会慢慢退。</p></article>
+        </div>
+        <aside class="plain-note"><strong>他睡着时不一样：</strong>短时间内连续点几下会把他吵醒，普通的生气次数不会在睡眠期间累计。</aside>
+      </section>
+
+      <section class="manual-section" id="drag" data-search-section>
+        <header><h2>拖他：搬位置、拎起来与扔出屏幕</h2><p>普通搬家很安静；抓着不放才会变成逗他。</p></header>
+        <div class="trigger-table">
+          <div><b>按住并拖到别处</b><span>月云了跟着鼠标移动。很快放下时，他只会站稳，不会每次都说话。</span></div>
+          <div><b>原地按住一会儿</b><span>他会意识到自己被拎起来，开始晃动和挣扎。抓住身体的不同位置，摆动的样子也会不同。</span></div>
+          <div><b>拎到屏幕最上方</b><span>他会挣扎得更明显，并警告你把他放下。聊天气泡会自动换方向，尽量留在屏幕里。</span></div>
+          <div><b>抓着一直不放</b><span>他会持续回嘴，可能自己挣脱并走远。继续惹到极限，还会变成狐狸、冲撞屏幕并记仇。</span></div>
+          <div><b>拖到屏幕外再松手</b><span>当身体大半不在屏幕里时，他会在外面待一会儿，然后自己走回来。反复这样做，回来时会骂得更凶。</span></div>
+        </div>
+        <aside class="plain-note"><strong>真的找不到了：</strong>Windows 看任务栏右下角，macOS 看屏幕右上角，点击 99 图标后选择“移回屏幕中央”。</aside>
+      </section>
+
+      <section class="manual-section" id="menu" data-search-section>
+        <header><h2>右键菜单：睡觉、提醒、葡萄和退出</h2><p>在月云了身上点鼠标右键，会出现围着他的四个图标。</p></header>
+        <div class="menu-legend">
+          <div><span>💤 / ☀️</span><strong>睡觉或唤醒</strong><p>点月亮睡下后，他会安静、不再自言自语，之前的怒气也会放下。再次打开菜单点太阳、拖动他，或快速连点都能唤醒。</p></div>
+          <div><span>🌙</span><strong>闹钟与计时器</strong><p>打开时间提醒窗口。这里可以新建、暂停、修改或删除提醒。</p></div>
+          <div><span>🍇</span><strong>喂葡萄</strong><p>平时点它不会发生什么。只有他暴走后正在记仇时，葡萄才是让他恢复正常的办法。</p></div>
+          <div><span>×</span><strong>退出程序</strong><p>会先询问你是否真的退出。退出后所有倒计时和闹钟都会暂停。</p></div>
+        </div>
+        <aside class="plain-note"><strong>记仇时：</strong>左右键点他都只会听到气话，不能拖动；右键菜单也只剩葡萄。喂到嘴里以后他才会消气。</aside>
+      </section>
+
+      <section class="manual-section" id="life" data-search-section>
+        <header><h2>不碰他时：他也会过自己的生活</h2><p>这些不是按钮，放着不管就有机会自己发生。</p></header>
+        <div class="life-lines">
+          <p><strong>平常待着</strong><span>他会在看电脑、玩手机、看电视、走动、唱歌、不开心或烦躁之间慢慢切换，不会不停说话。</span></p>
+          <p><strong>午饭时间</strong><span>大约在中午会先做饭，再坐下来吃饭。晚上吃过饭后，才可能自己喝红酒。</span></p>
+          <p><strong>你一直在用电脑</strong><span>过了一段时间，他会觉得你在专心做事；如果很久没理他，偶尔会阴阳怪气地插一句。</span></p>
+          <p><strong>你离开电脑</strong><span>电脑闲置一阵后，他会在桌面上探索，走走停停，偶尔变成狐狸。你一回来，他会立刻停下并变回人形。</span></p>
+          <p><strong>很久没打开</strong><span>隔了好几天再见，他会记得这次久别，开场方式和平常启动不一样。</span></p>
+        </div>
+      </section>
+
+      <section class="manual-section" id="reminders" data-search-section>
+        <header><h2>提醒：让他在该停下的时候来管你</h2><p>右键月云了点 🌙，或从 99 图标选择“闹钟与计时器”。</p></header>
+        <div class="reminder-kinds">
+          <article><h3>倒计时</h3><p>适合“25 分钟后提醒我”。可以直接选 5、15、25、60 分钟，也能自己填小时和分钟。运行中的倒计时可以暂停、继续或删除。</p></article>
+          <article><h3>闹钟</h3><p>适合“今天 18:30 提醒我”。可以只响一次，也可以设为每天或工作日重复。固定闹钟可以编辑、停用、重新启用或删除。</p></article>
+        </div>
+        <div class="trigger-table compact">
+          <div><b>简单提醒</b><span>到点后月云了会从原来的位置走到屏幕中间，问你是否知道了。点“好的”后他回原位；点“不要”会按你设定的时间再来一次。</span></div>
+          <div><b>强制提醒</b><span>到点后直接显示占满屏幕的大号提醒，需要你点“我知道了”或按 Esc 关闭。</span></div>
+          <div><b>先预览</b><span>在提醒窗口右上角点“5 秒后预览提醒效果”，不用真的等到闹钟时间。</span></div>
+        </div>
+        <aside class="plain-note"><strong>退出会暂停：</strong>程序完全退出后不会在后台响。再次启动时，重复闹钟会继续计算下一次时间，已经错过的旧提醒不会突然补响。</aside>
+      </section>
+
+      <section class="manual-section" id="dialogue" data-search-section>
+        <header><h2>台词工坊：决定每种情况下他说什么</h2><p>从 99 图标打开“台词工坊”。左边选发生的情况，中间写台词，右边看触发说明和试听。</p></header>
+        <ol class="workshop-path">
+          <li><span>选情况</span><p>例如“偶尔点他一下”“他在看电视”“被扔出屏幕后回来”。搜索框可以快速找到。</p></li>
+          <li><span>写台词</span><p>点“新增一句”，输入想让他说的话。某些日常活动还能选平静、开心、嫌弃或得意的表情。</p></li>
+          <li><span>试听</span><p>点“随便听一句”，月云了会在桌面上直接演给你看，不会因此真的生气。</p></li>
+          <li><span>保存并使用</span><p>保存后立刻生效。关闭窗口前如果还有没保存的修改，程序会提醒你。</p></li>
+        </ol>
+        <div class="trigger-table compact">
+          <div><b>上一次 / 下一次</b><span>在最近保存过的版本之间来回切换，最多保留最近 20 次。</span></div>
+          <div><b>叠加朋友的台词</b><span>只把朋友文件里的新句子加进来；本机原有台词不会被覆盖，重复句子会自动跳过。叠加后还要点“保存并使用”。</span></div>
+          <div><b>保存到文件</b><span>把满意的整套台词另存一份，方便备份或发给朋友。</span></div>
+          <div><b>恢复作者默认</b><span>先把默认内容载入编辑器，确认以后再保存；仍然可以用“上一次”回去。</span></div>
+          <div><b>找回最近备份</b><span>上次异常退出或台词文件损坏时使用。找到内容后，确认无误再点“保存并使用”。</span></div>
+        </div>
+      </section>
+
+      <section class="manual-section" id="settings" data-search-section>
+        <header><h2>设置与本机数据</h2><p>点击 99 图标选择“设置”。目前只有真正需要的几项。</p></header>
+        <div class="trigger-table">
+          <div><b>开机时自动启动他</b><span>打开后，登录电脑时月云了会自动出现。macOS 还可以在“系统设置 → 通用 → 登录项”里管理。</span></div>
+          <div><b>查看使用引导</b><span>重新打开第一次见面时的欢迎页。</span></div>
+          <div><b>导出诊断记录</b><span>遇到问题时保存一份说明文件交给作者。它会记录程序状态，但不会放入台词正文、提醒正文或完整的本地路径。</span></div>
+        </div>
+        <aside class="plain-note"><strong>卸载不会自动删掉你的内容：</strong>覆盖安装或普通卸载时，自己写的台词、提醒和设置会继续保留在这台电脑上。</aside>
+      </section>
+
+      <section class="manual-section" id="trouble" data-search-section>
+        <header><h2>找不到他，或者哪里不对</h2><p>先按下面顺序处理，通常不用重新安装。</p></header>
+        <div class="help-order">
+          <div><span>先找入口</span><p>Windows 查看任务栏右下角和“^”折叠菜单；macOS 查看屏幕右上角菜单栏。</p></div>
+          <div><span>移回中央</span><p>点击 99 图标，选择“移回屏幕中央”。显示器拔插或分辨率变化后也可以这样做。</p></div>
+          <div><span>检查是否睡着</span><p>睡眠时他不会自言自语。右键点他，看菜单里是不是太阳图标。</p></div>
+          <div><span>导出记录</span><p>仍然异常时，从“设置”导出诊断记录，把文件和你看到的现象一起发给作者。</p></div>
+        </div>
+      </section>
+
+      <section class="manual-end" aria-labelledby="manual-end-title">
+        <div><h2 id="manual-end-title">现在可以直接去招惹他了。</h2><p>忘了哪个入口，回来搜索一个动作就好。</p></div>
+        <a class="action primary" href="../#download">返回下载页</a>
+      </section>
+      <div class="no-results" id="no-results" hidden>
+        <strong>没有找到这个说法</strong>
+        <p>换成一个动作试试，比如“点”“拖”“睡觉”“提醒”或“台词”。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="docs-footer">
+    <p>月云了桌宠 · 正式产品文档</p>
+    <p>个人制作的非官方同人作品 · 请勿用于商业销售</p>
+  </footer>
+  <script src="docs.js"></script>
+</body>
+</html>

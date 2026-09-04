@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-04T22:08:00+08:00",
+  "title": "Design System: 月云了桌宠网站",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "奶白纸面", "canonical": "#fffaf0", "tonalRamp": ["#231f1a", "#443e34", "#655d4f", "#8f8572", "#b6aa94", "#d8cdb8", "#eee5d5", "#fffaf0"] },
+      "body-muted": { "role": "neutral", "displayName": "雾紫正文", "canonical": "#cbbfd7", "tonalRamp": ["#1f1925", "#3b3046", "#584967", "#786687", "#9a88aa", "#b9a9c6", "#d9ccdf", "#f5edf7"] },
+      "label-quiet": { "role": "neutral", "displayName": "暮紫标签", "canonical": "#9585a4", "tonalRamp": ["#1c1720", "#342c3a", "#4d4256", "#685a73", "#82728f", "#a394af", "#c6b9ce", "#eee8f2"] },
+      "primary": { "role": "primary", "displayName": "葡萄行动紫", "canonical": "#8052ae", "tonalRamp": ["#1f122c", "#352047", "#4b2e63", "#633e81", "#8052ae", "#a476c7", "#c9a4df", "#f1e5fb"] },
+      "primary-bright": { "role": "primary", "displayName": "月光亮紫", "canonical": "#c49be8", "tonalRamp": ["#23132e", "#422456", "#623880", "#824eaa", "#a86fd0", "#c49be8", "#ddc2f2", "#f6ebfd"] },
+      "night": { "role": "neutral", "displayName": "深夜背景", "canonical": "#17111f", "tonalRamp": ["#0b080e", "#17111f", "#2a2133", "#42354e", "#60506d", "#86758f", "#b8aabd", "#eee8f0"] },
+      "night-deep": { "role": "neutral", "displayName": "夜底黑紫", "canonical": "#0e0b13", "tonalRamp": ["#08060a", "#0e0b13", "#221b29", "#3a3043", "#584b62", "#7f7088", "#b3a8b8", "#ece8ee"] },
+      "panel": { "role": "neutral", "displayName": "墨紫面板", "canonical": "#24182f", "tonalRamp": ["#100a16", "#24182f", "#392447", "#513361", "#6b487e", "#906ca1", "#bea5c8", "#eee5f1"] },
+      "panel-high": { "role": "neutral", "displayName": "抬高墨紫", "canonical": "#31203f", "tonalRamp": ["#120b18", "#25172f", "#3c284b", "#553a67", "#704f85", "#956fab", "#c0a5cd", "#eee3f2"] },
+      "line": { "role": "neutral", "displayName": "月雾分隔线", "canonical": "rgba(225, 207, 240, 0.16)", "tonalRamp": ["#17111f", "#2b2233", "#403449", "#5f506a", "#82718d", "#ad9db7", "#d2c6d9", "#f4eef7"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "角色主张", "purpose": "首屏大标题与页面记忆点。" },
+      "headline": { "displayName": "章节标题", "purpose": "长页中的主要分段。" },
+      "body": { "displayName": "说明正文", "purpose": "功能、触发和结果的可扫读解释。" },
+      "label": { "displayName": "动作标签", "purpose": "按钮、目录、系统版本和序号。" }
+    },
+    "shadows": [
+      { "name": "stage-ambient", "value": "0 34px 78px rgba(5, 2, 8, 0.4)", "purpose": "大型人物舞台的环境深度。" },
+      { "name": "action-lift", "value": "0 14px 30px rgba(10, 5, 15, 0.32)", "purpose": "主要行动按钮的轻量浮起。" },
+      { "name": "note-support", "value": "0 15px 34px rgba(6, 3, 9, 0.24)", "purpose": "长文关键说明条的托底。" }
+    ],
+    "motion": [
+      { "name": "action-lift", "value": "180ms cubic-bezier(.2, .8, .2, 1)", "purpose": "按钮在精确指针上的短距离抬升。" },
+      { "name": "pet-arrival", "value": "700ms cubic-bezier(.16, 1, .3, 1)", "purpose": "文档首页角色第一次出现；减少动画偏好下禁用。" }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "900px" },
+      { "name": "mobile", "value": "660px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "每个阅读阶段唯一的主要下一步。",
+      "html": "<button class=\"ds-action-primary\">开始安装</button>",
+      "css": ".ds-action-primary { min-height: 50px; padding: 13px 18px; border: 0; border-radius: 12px; color: #fffaf0; background: #7950a1; box-shadow: 0 14px 30px rgba(10,5,15,.32); font: 760 14px/1.5 system-ui,sans-serif; transition: transform 180ms cubic-bezier(.2,.8,.2,1), background 180ms ease; } .ds-action-primary:hover { transform: translateY(-2px); background: #885eb0; } .ds-action-primary:focus-visible { outline: 3px solid rgba(210,174,241,.82); outline-offset: 4px; }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "与主要行动并列的次要选择。",
+      "html": "<button class=\"ds-action-secondary\">查看所有玩法</button>",
+      "css": ".ds-action-secondary { min-height: 50px; padding: 13px 18px; border: 1px solid rgba(225,207,240,.16); border-radius: 12px; color: #cbbfd7; background: rgba(255,255,255,.035); font: 760 14px/1.5 system-ui,sans-serif; transition: transform 180ms cubic-bezier(.2,.8,.2,1), background 180ms ease; } .ds-action-secondary:hover { transform: translateY(-2px); background: rgba(255,255,255,.07); } .ds-action-secondary:focus-visible { outline: 3px solid rgba(210,174,241,.82); outline-offset: 4px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "完整手册按用户动作筛选内容的入口。",
+      "html": "<input class=\"ds-search\" aria-label=\"搜索功能\" placeholder=\"例如：睡觉、提醒、台词\">",
+      "css": ".ds-search { width: 280px; height: 48px; padding: 0 14px; border: 1px solid rgba(225,207,240,.16); border-radius: 12px; outline: 0; color: #fffaf0; background: rgba(255,255,255,.035); font: 400 14px/1.75 system-ui,sans-serif; } .ds-search::placeholder { color: #7f708a; } .ds-search:hover { border-color: rgba(225,207,240,.3); } .ds-search:focus-visible { border-color: #c49be8; box-shadow: 0 0 0 3px rgba(196,155,232,.13); }"
+    },
+    {
+      "name": "Platform Chip",
+      "kind": "chip",
+      "description": "Windows 与 macOS 的选中状态。",
+      "html": "<button class=\"ds-platform\"><strong>macOS</strong><small>12+</small></button>",
+      "css": ".ds-platform { display: inline-flex; min-width: 170px; min-height: 54px; padding: 0 16px; align-items: center; justify-content: space-between; border: 0; border-radius: 10px; color: #fffaf0; background: #31203f; font: 760 14px/1.4 system-ui,sans-serif; } .ds-platform small { color: #c49be8; font-size: 11px; } .ds-platform:hover { background: #3c2850; } .ds-platform:focus-visible { outline: 3px solid rgba(210,174,241,.82); outline-offset: 4px; }"
+    },
+    {
+      "name": "Plain Note",
+      "kind": "card",
+      "refersTo": "content-panel",
+      "description": "从连续说明里提起安全、数据或恢复提醒。",
+      "html": "<aside class=\"ds-note\"><strong>记住：</strong>台词、提醒和设置默认只保存在这台电脑里。</aside>",
+      "css": ".ds-note { max-width: 560px; padding: 20px 22px; border-radius: 14px; color: #cbbfd7; background: #2d1d3b; box-shadow: 0 15px 34px rgba(6,3,9,.24); font: 400 13px/1.75 system-ui,sans-serif; } .ds-note strong { color: #fffaf0; } .ds-note:hover { background: #31203f; } .ds-note:focus-within { outline: 3px solid rgba(210,174,241,.82); outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "深紫夜间使用手册",
+    "overview": "这是一个像角色在夜色桌面里递来说明书的视觉系统：安静、克制，有一点嘴硬，但所有操作都必须一眼看懂。深色背景承载大尺度奶白标题，紫色只用来标出行动、状态和可点击入口；真实的月云了立绘与 99 图标负责让页面仍然属于这个角色，而不是普通软件文档。信息密度允许偏高，但必须靠清晰的网格、短句、细分隔线和稳定的上下节奏保持轻松。电脑端以不对称双栏和固定目录制造方向感，手机端重排为单栏并把目录变成可横滑的动作标签。",
+    "keyCharacteristics": ["深紫渐层背景、奶白高对比标题与低饱和正文。", "超大、紧凑的中文标题配合细线账本式信息结构。", "真实人物与 99 图标是主要识别资产，装饰保持节制。", "行动入口醒目，说明区域平静，所有主要点击目标至少 44px 高。"],
+    "rules": [
+      { "name": "The Rare Purple Rule", "body": "高亮紫只标记行动、选中和方向；不能把整段正文或大面积背景都染成亮紫。", "section": "colors" },
+      { "name": "The Cream First Rule", "body": "最高层级信息始终先用奶白建立对比，不能用纯白与高饱和彩色争夺角色资产。", "section": "colors" },
+      { "name": "The One Glance Rule", "body": "每个内容块先出现一句粗体结论，再出现解释；禁止让用户先读完整段落才知道这块讲什么。", "section": "typography" },
+      { "name": "The Flat Reading Rule", "body": "连续阅读内容默认平面化；阴影只给角色舞台、行动和少量关键说明，不能让每一块文字都变成悬浮卡片。", "section": "elevation" }
+    ],
+    "dos": ["Do 先用一句用户动作或结论命名内容块，再补充结果和解释。", "Do 在 Windows 与 macOS 入口不同时同时说明两个位置。", "Do 使用真实月云了立绘与 99 图标建立角色归属。", "Do 让桌面和手机拥有相同内容、可操作入口与安全说明。"],
+    "donts": ["Don't 用伪造的系统截图或与真实产品不一致的界面演示。", "Don't 把每个段落都包成有阴影的卡片，或用渐变代替真实人物素材。", "Don't 用软件内部模块名组织面向用户的说明。", "Don't 为了视觉完整而隐藏当前安装包的版本、签名状态或系统要求。"]
+  }
+}

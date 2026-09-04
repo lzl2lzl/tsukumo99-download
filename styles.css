@@ -87,6 +87,25 @@ button { border: 0; }
   white-space: nowrap;
 }
 
+.site-nav {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 22px;
+}
+
+.site-nav a {
+  min-height: 44px;
+  padding: 12px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-underline-offset: 5px;
+}
+
+.site-nav .history-link { margin-left: 0; }
+.site-nav a:first-child { text-decoration: none; }
+.site-nav a:first-child:hover { color: var(--paper); }
+
 main {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
@@ -425,6 +444,50 @@ h1 {
   font-variant-numeric: tabular-nums;
 }
 
+.guide-entry {
+  display: flex;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 22px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.guide-entry strong { font-size: 15px; }
+
+.guide-entry p {
+  max-width: 48ch;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.guide-entry-actions {
+  display: flex;
+  flex: none;
+  gap: 8px;
+}
+
+.guide-entry-actions a {
+  display: inline-flex;
+  min-height: 44px;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--paper);
+  font-size: 12px;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+.guide-entry-actions a:last-child { background: #76509d; }
+
 footer {
   display: flex;
   width: min(1120px, calc(100% - 40px));
@@ -454,6 +517,8 @@ footer p { margin: 0; }
 
 .download-button:focus-visible,
 .platform-switch button:focus-visible,
+.site-nav a:focus-visible,
+.guide-entry-actions a:focus-visible,
 .history-link:focus-visible,
 .identity:focus-visible {
   outline: 3px solid rgba(213, 174, 248, 0.8);
@@ -480,6 +545,8 @@ footer p { margin: 0; }
 
   .site-header { min-height: 82px; }
   .history-link { font-size: 12px; }
+  .site-nav { gap: 14px; }
+  .site-nav a { font-size: 12px; }
 
   .hero {
     gap: 42px;
@@ -532,6 +599,8 @@ footer p { margin: 0; }
 
   .notice { margin-top: 58px; }
   .install-guide { margin-bottom: 64px; }
+  .guide-entry { align-items: stretch; flex-direction: column; }
+  .guide-entry-actions a { flex: 1; }
 
   footer {
     gap: 8px;
