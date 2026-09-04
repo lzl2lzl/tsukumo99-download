@@ -2,84 +2,178 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="月云了桌宠 Windows 测试版官方下载页。">
-  <meta name="theme-color" content="#241932">
-  <title>月云了桌宠 · 下载</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="月云了桌宠朋友测试版，现已支持 Windows 10/11 与 macOS 12 及以上版本。">
+  <meta name="theme-color" content="#17111f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="月云了桌宠 · Windows 与 macOS">
+  <meta property="og:description" content="他只是暂时住在你的桌面上。下载 Windows 或 macOS 朋友测试版。">
+  <meta property="og:image" content="https://lzl2lzl.github.io/tsukumo99-download/social-preview.png">
+  <meta property="og:url" content="https://lzl2lzl.github.io/tsukumo99-download/">
+  <title>月云了桌宠 · Windows 与 macOS 下载</title>
   <link rel="icon" href="icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page-shell">
+  <header class="site-header">
+    <a class="identity" href="#top" aria-label="月云了桌宠下载页顶部">
+      <img src="icon.png" alt="" width="46" height="46">
+      <span><strong>月云了</strong><small>桌面常驻中</small></span>
+    </a>
+    <a class="history-link" href="https://github.com/lzl2lzl/tsukumo99-download/releases" rel="noreferrer">历史版本</a>
+  </header>
+
+  <main id="top">
     <section class="hero" aria-labelledby="page-title">
-      <div class="brand-mark">
-        <img src="icon.png" alt="紫色 99 图标" width="118" height="118">
+      <div class="hero-copy">
+        <div class="release-line" aria-live="polite">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="release-version">v0.1.0-beta.3</span>
+          <span>朋友测试版</span>
+        </div>
+        <h1 id="page-title">现在，他也住进 Mac 了。</h1>
+        <p class="tagline">会说话、会闹脾气，也会在该休息的时候来管你。Windows 与 macOS 使用同一套月云了、台词和提醒体验。</p>
+
+        <div class="platform-switch" role="tablist" aria-label="选择电脑系统">
+          <button id="tab-windows" type="button" role="tab" aria-selected="true" aria-controls="panel-windows" data-platform="windows">
+            <span>Windows</span><small>10 / 11</small>
+          </button>
+          <button id="tab-macos" type="button" role="tab" aria-selected="false" aria-controls="panel-macos" data-platform="macos">
+            <span>macOS</span><small>12+</small>
+          </button>
+        </div>
+
+        <div class="download-panels">
+          <section class="platform-panel" id="panel-windows" role="tabpanel" aria-labelledby="tab-windows">
+            <a class="download-button primary" id="setup-download" href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.3/Tsukumo99-Setup.exe">
+              <span class="button-title">下载 Windows 安装版</span>
+              <span class="button-meta">推荐 · 按向导完成安装</span>
+            </a>
+            <a class="download-button secondary" id="portable-download" href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.3/Tsukumo99-Portable.zip">
+              <span class="button-title">免安装版</span>
+              <span class="button-meta">解压后直接运行</span>
+            </a>
+          </section>
+
+          <section class="platform-panel" id="panel-macos" role="tabpanel" aria-labelledby="tab-macos">
+            <a class="download-button primary" id="mac-dmg-download" href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.3/Tsukumo99-macOS-universal.dmg">
+              <span class="button-title">下载 macOS 通用版</span>
+              <span class="button-meta">DMG · Apple 芯片与 Intel 均可</span>
+            </a>
+            <a class="download-button secondary" id="mac-zip-download" href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.3/Tsukumo99-macOS-universal.zip">
+              <span class="button-title">下载 ZIP 备用包</span>
+              <span class="button-meta">无法使用 DMG 时选择</span>
+            </a>
+          </section>
+        </div>
+
+        <p class="system-note" id="system-note">适用于 64 位 Windows 10 / 11。</p>
       </div>
 
-      <p class="eyebrow">WINDOWS 桌面宠物</p>
-      <h1 id="page-title">月云了</h1>
-      <p class="tagline">他只是暂时住在你的桌面上。</p>
-
-      <div class="release-line" aria-live="polite">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span id="release-version">v0.1.0-beta.2</span>
-        <span class="release-label">朋友测试版</span>
+      <div class="desktop-stage" aria-label="月云了桌宠在 macOS 桌面上的预览">
+        <div class="stage-menubar" aria-hidden="true">
+          <span class="stage-brand">99</span>
+          <span>月云了桌宠</span>
+          <span class="stage-clock">09:09</span>
+        </div>
+        <div class="speech">换台电脑，也甩不掉我。</div>
+        <div class="platform-stamp"><strong>WINDOWS</strong><span>+</span><strong>macOS</strong></div>
+        <img class="pet-preview" src="pet-preview.png" alt="月云了站在桌面上" width="512" height="512">
+        <p class="stage-caption">UNIVERSAL · APPLE SILICON + INTEL</p>
       </div>
+    </section>
 
-      <div class="downloads">
-        <a
-          class="download-button primary"
-          id="setup-download"
-          href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.2/Tsukumo99-Setup.exe"
-        >
-          <span class="button-title">下载安装版</span>
-          <span class="button-meta">推荐 · Windows 10 / 11</span>
-        </a>
-
-        <a
-          class="download-button secondary"
-          id="portable-download"
-          href="https://github.com/lzl2lzl/tsukumo99-download/releases/download/v0.1.0-beta.2/Tsukumo99-Portable.zip"
-        >
-          <span class="button-title">下载免安装版</span>
-          <span class="button-meta">解压后直接运行</span>
-        </a>
-      </div>
-
-      <div class="feature-row" aria-label="主要功能">
-        <span>台词工坊</span>
-        <span>闹钟与计时器</span>
-        <span>数据仅存本地</span>
-      </div>
+    <section class="feature-ledger" aria-label="主要功能">
+      <p><strong>会陪你</strong><span>轻点说话，快速连点会惹他生气。</span></p>
+      <p><strong>会管你</strong><span>闹钟与计时器到点亲自来提醒。</span></p>
+      <p><strong>只住本地</strong><span>台词、提醒和设置不会自动上传。</span></p>
     </section>
 
     <section class="notice" aria-labelledby="notice-title">
-      <div class="notice-icon" aria-hidden="true">!</div>
+      <div class="notice-mark" aria-hidden="true">!</div>
       <div>
-        <h2 id="notice-title">下载前请知道</h2>
-        <p>
-          当前是未签名测试版，Windows 可能提示“未知发布者”。
-          请只从本页下载，不要为了运行它而关闭安全软件。
-        </p>
+        <h2 id="notice-title">这是未签名的朋友测试版</h2>
+        <p id="security-copy">Windows 可能提示“未知发布者”。请先核对下载地址，不要为了运行来源不明的文件而关闭安全软件。</p>
       </div>
     </section>
 
-    <section class="small-print" aria-label="其他说明">
-      <p>台词、提醒、设置和日志默认仅保存在你的电脑中，不会自动上传。</p>
-      <a href="https://github.com/lzl2lzl/tsukumo99-download/releases" rel="noreferrer">查看历史版本</a>
+    <section class="install-guide" aria-labelledby="install-title">
+      <h2 id="install-title">第一次见面</h2>
+      <ol id="install-steps">
+        <li><span>01</span>下载并运行 Windows 安装版。</li>
+        <li><span>02</span>完成引导后，他会出现在桌面和任务栏右下角。</li>
+        <li><span>03</span>找不到时，从紫色 99 图标选择“移回屏幕中央”。</li>
+      </ol>
     </section>
   </main>
 
   <footer>
     <p>个人制作的非官方同人测试作品 · 请勿用于商业销售</p>
+    <p>下载页与安装文件托管于 GitHub</p>
   </footer>
 
   <script>
     const repository = 'lzl2lzl/tsukumo99-download';
+    const fallbackVersion = 'v0.1.0-beta.3';
     const assetNames = {
       setup: 'Tsukumo99-Setup.exe',
       portable: 'Tsukumo99-Portable.zip',
+      macDmg: 'Tsukumo99-macOS-universal.dmg',
+      macZip: 'Tsukumo99-macOS-universal.zip',
     };
+
+    const platformContent = {
+      windows: {
+        note: '适用于 64 位 Windows 10 / 11。',
+        security: 'Windows 可能提示“未知发布者”。请先核对下载地址，不要为了运行来源不明的文件而关闭安全软件。',
+        steps: [
+          '下载并运行 Windows 安装版。',
+          '完成引导后，他会出现在桌面和任务栏右下角。',
+          '找不到时，从紫色 99 图标选择“移回屏幕中央”。',
+        ],
+      },
+      macos: {
+        note: '适用于 macOS 12 及以上版本；一个包同时支持 Apple 芯片与 Intel Mac。',
+        security: 'macOS 首次打开可能被阻止。请在“应用程序”中按住 Control 点击“月云了桌宠”，选择“打开”，再在确认框中选择“打开”。不需要关闭系统安全功能。',
+        steps: [
+          '打开 DMG，把“月云了桌宠”拖进“应用程序”。',
+          '首次打开若被拦截，按住 Control 点击应用并选择“打开”。',
+          '运行后从屏幕右上角的黑白 99 图标进入设置或找回他。',
+        ],
+      },
+    };
+
+    function activatePlatform(platform, focus = false) {
+      document.querySelectorAll('[role="tab"]').forEach((tab) => {
+        const selected = tab.dataset.platform === platform;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        if (selected && focus) tab.focus();
+      });
+      document.querySelectorAll('.platform-panel').forEach((panel) => {
+        panel.hidden = panel.id !== `panel-${platform}`;
+      });
+      document.getElementById('system-note').textContent = platformContent[platform].note;
+      document.getElementById('security-copy').textContent = platformContent[platform].security;
+      document.getElementById('install-steps').innerHTML = platformContent[platform].steps
+        .map((step, index) => `<li><span>0${index + 1}</span>${step}</li>`)
+        .join('');
+    }
+
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activatePlatform(tab.dataset.platform));
+      tab.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+        event.preventDefault();
+        const next = tabs[(index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+        activatePlatform(next.dataset.platform, true);
+      });
+    });
+
+    const prefersMac = /Mac|iPhone|iPad/i.test(navigator.platform)
+      || /Macintosh/i.test(navigator.userAgent);
+    activatePlatform(prefersMac ? 'macos' : 'windows');
 
     fetch(`https://api.github.com/repos/${repository}/releases?per_page=10`, {
       headers: { Accept: 'application/vnd.github+json' },
@@ -89,16 +183,23 @@
         return response.json();
       })
       .then((releases) => {
-        const latest = releases.find((release) => !release.draft);
+        const latest = releases.find((release) => !release.draft && Object.values(assetNames)
+          .some((name) => release.assets.some((asset) => asset.name === name)));
         if (!latest) return;
-        document.getElementById('release-version').textContent = latest.tag_name;
-        const setup = latest.assets.find((asset) => asset.name === assetNames.setup);
-        const portable = latest.assets.find((asset) => asset.name === assetNames.portable);
-        if (setup) document.getElementById('setup-download').href = setup.browser_download_url;
-        if (portable) document.getElementById('portable-download').href = portable.browser_download_url;
+        document.getElementById('release-version').textContent = latest.tag_name || fallbackVersion;
+        const links = {
+          setup: 'setup-download',
+          portable: 'portable-download',
+          macDmg: 'mac-dmg-download',
+          macZip: 'mac-zip-download',
+        };
+        Object.entries(links).forEach(([key, id]) => {
+          const asset = latest.assets.find((item) => item.name === assetNames[key]);
+          if (asset) document.getElementById(id).href = asset.browser_download_url;
+        });
       })
       .catch(() => {
-        // 保留 HTML 中的当前版本备用链接。
+        // 保留 HTML 内的当前版本备用链接。
       });
   </script>
 </body>
