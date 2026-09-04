@@ -69,6 +69,7 @@
             </a>
           </section>
         </div>
+        <p class="download-disclosure" id="security-brief"><strong>未签名说明：</strong>Windows 可能显示“未知发布者”。请只从本站下载，确认来源后再打开。</p>
 
         <p class="system-note" id="system-note">适用于 64 位 Windows 10 / 11。</p>
       </div>
@@ -95,7 +96,7 @@
     <section class="notice" aria-labelledby="notice-title">
       <div class="notice-mark" aria-hidden="true">!</div>
       <div>
-        <h2 id="notice-title">下载前请先了解：当前安装包未签名</h2>
+        <h2 id="notice-title">安装前请先了解：当前安装包未签名</h2>
         <p id="security-copy">当前 Windows 安装包暂未使用系统认可的开发者签名，Windows 可能显示“未知发布者”。这不等于已经检测到病毒，但系统无法核验作者身份；只从本站下载，地址不对或安全软件明确报警时请勿运行。</p>
       </div>
     </section>
@@ -121,7 +122,7 @@
   </main>
 
   <footer>
-    <p>个人制作的非官方同人测试作品 · 请勿用于商业销售</p>
+    <p>个人制作的非官方同人作品 · 请勿用于商业销售</p>
     <p>下载页与安装文件托管于 GitHub</p>
   </footer>
 
@@ -138,6 +139,7 @@
     const platformContent = {
       windows: {
         note: '适用于 64 位 Windows 10 / 11。',
+        brief: '<strong>未签名说明：</strong>Windows 可能显示“未知发布者”。请只从本站下载，确认来源后再打开。',
         security: '当前 Windows 安装包暂未使用系统认可的开发者签名，Windows 可能显示“未知发布者”。这不等于已经检测到病毒，但系统无法核验作者身份；只从本站下载，地址不对或安全软件明确报警时请勿运行。',
         steps: [
           '下载并运行 Windows 安装版。',
@@ -147,6 +149,7 @@
       },
       macos: {
         note: '适用于 macOS 12 及以上版本；一个包同时支持 Apple 芯片与 Intel Mac。',
+        brief: '<strong>未签名说明：</strong>macOS 可能显示“无法验证开发者”。请只从本站下载，确认来源后按使用说明打开。',
         security: '当前 macOS 安装包暂未使用 Apple Developer ID 签名和公证，系统可能显示“无法验证开发者”。这不等于已经检测到病毒，但 macOS 无法核验作者及文件是否在发布后被改动；请确认下载来源后再按使用说明打开。',
         steps: [
           '打开 DMG，把“月云了桌宠”拖进“应用程序”。',
@@ -167,6 +170,7 @@
         panel.hidden = panel.id !== `panel-${platform}`;
       });
       document.getElementById('system-note').textContent = platformContent[platform].note;
+      document.getElementById('security-brief').innerHTML = platformContent[platform].brief;
       document.getElementById('security-copy').textContent = platformContent[platform].security;
       document.getElementById('install-steps').innerHTML = platformContent[platform].steps
         .map((step, index) => `<li><span>0${index + 1}</span>${step}</li>`)

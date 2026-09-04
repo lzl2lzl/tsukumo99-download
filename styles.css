@@ -617,3 +617,27 @@ footer p { margin: 0; }
 
   .pet-preview { animation: none; }
 }
+
+/* Download decision copy stays readable without competing with the main action. */
+.button-meta {
+  color: rgba(255, 250, 240, 0.84);
+  font-size: 13px;
+}
+
+.download-disclosure {
+  max-width: 560px;
+  margin: 13px 0 0;
+  color: #e2d6eb;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.download-disclosure strong { color: var(--paper); }
+
+.system-note {
+  margin-top: 6px;
+  color: #c6b8d1;
+  font-size: 13px;
+}
+
+footer { color: #c6b8d1; }
