@@ -47,7 +47,8 @@ web
 - 真实功能与触发规则：应用源码 `src/`、`config/config.json`、`config/dialogue-manifest.json`。
 - 用户安装与安全说明：`release/使用说明.txt`、`release/用户须知.txt`。
 - 现有视觉与人物素材：下载页 `index.html`、`styles.css`、`pet-preview.png`、`icon.png`。
-- 暂无适合公开发布的系统托盘或应用窗口实拍截图；文档不得伪造系统截图。
+- 托盘入口素材：Windows 隐私打码位置图 `guide/windows-tray-privacy.png`，以及应用实际使用的 macOS 黑白菜单栏图标 `guide/mac-tray-template.png`。
+- 没有经过隐私处理的系统截图不得公开；文档不得伪造系统截图。
 
 ## Product Principles
 

@@ -35,7 +35,7 @@
     <section class="guide-hero" aria-labelledby="guide-title">
       <div class="guide-hero-copy">
         <h1 id="guide-title">第一次见面，三步就够了。</h1>
-        <p>把他带到桌面，认住 99 图标，然后直接点他。其他功能想用时再查，不用先读完这本说明。</p>
+        <p>把他带到桌面，先记住两个右键入口：右键月云了，或者右键 99 图标。其他功能想用时再查，不用先读完这本说明。</p>
         <div class="hero-actions">
           <a class="action primary" href="#install">开始安装</a>
           <a class="action secondary" href="features.html">查看所有玩法</a>
@@ -50,8 +50,8 @@
 
     <section class="three-step" aria-label="三步上手">
       <div><span>1</span><strong>下载安装</strong><p>选择 Windows 或 macOS，把月云了放进电脑。</p></div>
-      <div><span>2</span><strong>认住 99 图标</strong><p>它是找回桌宠、打开设置和台词工坊的总入口。</p></div>
-      <div><span>3</span><strong>开始相处</strong><p>轻点他说话，拖动他换位置，右键打开日常功能。</p></div>
+      <div><span>2</span><strong>记住两个右键</strong><p>右键月云了管日常；右键 99 图标找设置和台词工坊。</p></div>
+      <div><span>3</span><strong>开始相处</strong><p>轻点他说话，拖动他换位置，需要功能时右键操作。</p></div>
     </section>
 
     <section class="section-block capabilities" aria-labelledby="can-do-title">
@@ -71,25 +71,45 @@
 
     <section class="section-block entry-map-section" aria-labelledby="entry-map-title">
       <header class="section-heading">
-        <h2 id="entry-map-title">先认住三个操作位置</h2>
-        <p>下面是位置示意，不是系统截图。记住 99 图标，就不用担心把他弄丢。</p>
+        <h2 id="entry-map-title">只记住两个右键</h2>
+        <p>一个右键月云了，一个右键 99 图标。大部分功能都从这两个地方开始。</p>
       </header>
-      <div class="desktop-map" role="img" aria-label="macOS 的 99 图标在屏幕右上角，Windows 的 99 图标在任务栏右下角；右键点击月云了会出现圆形功能菜单">
-        <div class="map-menubar"><span>macOS</span><b class="map-pin top"><img src="../icon.png" alt="">右上角菜单栏</b></div>
-        <div class="map-pet">
-          <span class="orbit orbit-sleep">💤</span>
-          <span class="orbit orbit-time">🌙</span>
-          <span class="orbit orbit-grape">🍇</span>
-          <span class="orbit orbit-quit">×</span>
-          <img src="../pet-preview.png" width="512" height="512" alt="">
-          <strong>右键点他</strong>
-        </div>
-        <div class="map-taskbar"><span>Windows</span><b class="map-pin bottom"><img src="../icon.png" alt="">右下角任务栏</b></div>
-      </div>
-      <div class="entry-notes">
-        <p><strong>点 99 图标</strong><span>打开闹钟与计时器、台词工坊、设置，也能退出。</span></p>
-        <p><strong>右键月云了</strong><span>哄睡或唤醒、打开提醒、退出；他记仇时这里只剩葡萄。</span></p>
-        <p><strong>看不见他</strong><span>从 99 图标选择“移回屏幕中央”。</span></p>
+      <div class="entry-pair">
+        <article class="entry-door pet-entry">
+          <header class="entry-door-header">
+            <span>1</span>
+            <div><h3>右键桌面上的月云了</h3><p>把鼠标移到他身上，点右键。</p></div>
+          </header>
+          <div class="pet-entry-visual" role="img" aria-label="右键点击桌面上的月云了，会出现睡觉、提醒、葡萄和退出图标">
+            <span class="orbit orbit-sleep">💤</span>
+            <span class="orbit orbit-time">🌙</span>
+            <span class="orbit orbit-grape">🍇</span>
+            <span class="orbit orbit-quit">×</span>
+            <img src="../pet-preview.png" width="512" height="512" alt="">
+            <strong>在他身上点右键</strong>
+          </div>
+          <p class="entry-door-summary">这里可以让他睡觉或醒来、打开提醒、喂葡萄和退出。</p>
+        </article>
+
+        <article class="entry-door tray-entry">
+          <header class="entry-door-header">
+            <span>2</span>
+            <div><h3>右键 99 托盘图标</h3><p>看不见月云了、想改设置或台词时，就来这里。</p></div>
+          </header>
+          <div class="tray-identity-row" aria-label="Windows 和 macOS 的 99 图标外观">
+            <div class="tray-identity"><img src="../icon.png" width="52" height="52" alt="Windows 紫色 99 托盘图标"><span><strong>Windows</strong><small>紫色 99</small></span></div>
+            <div class="tray-identity mac"><span class="mac-icon-swatch"><img src="mac-tray-template.png" width="32" height="20" alt="macOS 黑白 99 菜单栏图标"></span><span><strong>macOS</strong><small>黑白小 99</small></span></div>
+          </div>
+          <figure class="tray-proof">
+            <img src="windows-tray-privacy.png" width="1584" height="994" alt="Windows 右下角通知区域中被方框标出的紫色 99 图标；其余桌面内容均已打码">
+            <figcaption>Windows 位置示意：其他桌面内容均已打码，只看方框里的紫色 99。</figcaption>
+          </figure>
+          <dl class="tray-locations">
+            <div><dt>Windows</dt><dd>看屏幕右下角通知区域。没看见时先点 <b>^</b> 展开隐藏图标，再右键紫色 99。</dd></div>
+            <div><dt>macOS</dt><dd>看屏幕右上角菜单栏，在 Wi-Fi、电量和时间附近找到黑白 99，再右键它。触控板用两指点按。</dd></div>
+          </dl>
+          <p class="entry-door-summary">这里可以移回屏幕中央、打开提醒、台词工坊和设置，也能退出。</p>
+        </article>
       </div>
     </section>
 
@@ -106,7 +126,7 @@
         <ol class="install-path">
           <li><span>下载</span><p>去下载页选择“Windows 安装版”。不想安装时可以选免安装 ZIP。</p></li>
           <li><span>安装</span><p>运行安装文件，跟着电脑上的提示完成。只从本站下载，不要为了运行而关闭安全软件。</p></li>
-          <li><span>找到他</span><p>月云了会出现在桌面；任务栏右下角会有紫色 99 图标，图标也可能藏在“^”里面。</p></li>
+          <li><span>找到入口</span><p>看屏幕右下角通知区域。没看到紫色 99 时先点“^”展开隐藏图标，找到后对它点右键。</p></li>
         </ol>
         <a class="action primary" href="../?platform=windows#download">去下载 Windows 版</a>
       </div>
@@ -114,7 +134,7 @@
         <ol class="install-path">
           <li><span>下载</span><p>去下载页选择“macOS 通用版”。同一个包可以用于 Apple 芯片和 Intel Mac。</p></li>
           <li><span>安装</span><p>打开 DMG，把“月云了桌宠”拖进“应用程序”。若首次打开被拦截，请按下载页的安全提示操作。</p></li>
-          <li><span>找到他</span><p>月云了会出现在桌面；屏幕右上角菜单栏会有黑白 99 图标。</p></li>
+          <li><span>找到入口</span><p>看屏幕右上角菜单栏，在 Wi-Fi、电量和时间附近找到黑白 99，右键它；触控板用两指点按。</p></li>
         </ol>
         <a class="action primary" href="../?platform=macos#download">去下载 macOS 版</a>
       </div>
@@ -127,14 +147,14 @@
       </header>
       <div class="choice-lines">
         <p><strong>先直接使用</strong><span>马上使用作者准备好的台词。最省事，推荐第一次打开时选这个。</span></p>
-        <p><strong>现在写自己的台词</strong><span>直接进入台词工坊。以后也随时能从 99 图标打开，不急着现在写。</span></p>
+        <p><strong>现在写自己的台词</strong><span>直接进入台词工坊。以后也随时能右键 99 图标打开，不急着现在写。</span></p>
       </div>
     </section>
 
     <section class="section-block basics" aria-labelledby="basics-title">
       <header class="section-heading">
         <h2 id="basics-title">建议先做的基础设置</h2>
-        <p>都在 99 图标的“设置”里，不需要翻很多选项。</p>
+        <p>右键 99 图标，再选择“设置”，不需要翻很多选项。</p>
       </header>
       <div class="basic-route">
         <div><strong>开机时自动启动他</strong><p>打开后，下次登录电脑时月云了会一起出现。macOS 也可以在“系统设置 → 通用 → 登录项”里管理。</p></div>
