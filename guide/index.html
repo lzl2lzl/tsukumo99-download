@@ -3,189 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'">
-  <meta name="description" content="月云了桌宠正式产品文档：下载安装、第一次打开、基础设置和常用功能。">
-  <meta name="theme-color" content="#17111f">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'">
+  <meta name="description" content="月云了桌宠使用说明：基本玩法、功能入口、提醒与台词。">
+  <meta name="theme-color" content="#f7f3f8">
   <title>月云了桌宠 · 使用说明</title>
   <link rel="icon" href="../icon.png">
-  <link rel="stylesheet" href="docs.css?v=20260904-3">
+  <link rel="stylesheet" href="docs.css?v=20261002">
 </head>
 <body>
-  <!--
-  THESIS: 用“做一个动作，看一个回应”教会用户，而不是让人先读完整说明书。
-  OWN-WORLD: 深紫夜色、奶白正文、紫色动作标记、99 图标和角色立绘；内容以清晰的路线、地图与成对说明组织。
-  STORY: 读者先知道他能做什么，再完成下载、第一次打开和基础设置，最后按需要进入完整功能手册。
-  FIRST VIEWPORT: 左侧是一句话说明和两个明确入口，右侧由月云了演示“先点我一下”，下方立刻出现三步上手路线。
-  FORM: 动作反应手册，结构候选第 5 项；首页采用短路线进入操作地图，seed e14ae2bf。
-  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
-  -->
   <header class="docs-header">
     <a class="docs-identity" href="../" aria-label="返回月云了桌宠下载页">
-      <img src="../icon.png" width="42" height="42" alt="">
-      <span><strong>月云了</strong><small>产品文档</small></span>
+      <img src="../icon.png" width="38" height="38" alt="">
+      <strong>月云了桌宠</strong>
     </a>
-    <nav class="docs-nav" aria-label="产品文档导航">
-      <a class="active" href="./" aria-current="page">快速开始</a>
-      <a href="features.html">完整功能</a>
+    <nav class="docs-nav" aria-label="使用说明导航">
+      <a href="#play">怎么玩</a>
+      <a href="#where">功能在哪</a>
       <a href="../#download">下载</a>
     </nav>
   </header>
 
   <main>
     <section class="guide-hero" aria-labelledby="guide-title">
-      <div class="guide-hero-copy">
-        <h1 id="guide-title">第一次见面，三步就够了。</h1>
-        <p>把他带到桌面，先记住两个右键入口：右键月云了，或者右键 99 图标。其他功能想用时再查，不用先读完这本说明。</p>
-        <div class="hero-actions">
-          <a class="action primary" href="#install">开始安装</a>
-          <a class="action secondary" href="features.html">查看所有玩法</a>
+      <div>
+        <h1 id="guide-title">使用说明</h1>
+        <p>月云了不用专门学。先记住点、拖和两个右键，其他功能需要时再打开。</p>
+      </div>
+      <div class="guide-pet">
+        <p>别点太快。</p>
+        <img src="../pet-preview.png" width="512" height="512" alt="站在桌面上的月云了">
+      </div>
+    </section>
+
+    <section class="guide-section" id="play" aria-labelledby="play-title">
+      <header>
+        <h2 id="play-title">平时怎么玩</h2>
+        <p>直接在桌面上和他互动。</p>
+      </header>
+      <div class="guide-lines">
+        <p><strong>轻点一下</strong><span>他说一句和当前活动有关的话。正在看电视、玩手机或吃饭时，台词也会跟着变。</span></p>
+        <p><strong>连续点他</strong><span>他会先躲开，再回嘴。一直不停手，会把他真正惹生气。</span></p>
+        <p><strong>按住拖动</strong><span>把他搬到桌面上的其他位置。抓得太久或扔出屏幕，他会自己做出反应。</span></p>
+        <p><strong>暂时不管他</strong><span>他会看电脑、玩手机、唱歌、吃饭或四处走动，不会一直站着不动。</span></p>
+      </div>
+    </section>
+
+    <section class="guide-section" id="where" aria-labelledby="where-title">
+      <header>
+        <h2 id="where-title">功能在哪里</h2>
+        <p>日常功能和设置不在同一个菜单里。</p>
+      </header>
+      <div class="menu-lines">
+        <div>
+          <h3>右键桌面上的月云了</h3>
+          <p>这里放睡觉、闹钟与计时器和退出。记仇时，菜单里会出现能让他消气的东西。</p>
+        </div>
+        <div>
+          <h3>右键 99 图标</h3>
+          <p>这里放台词工坊、设置和“移回屏幕中央”。Windows 的 99 在任务栏右下角，macOS 的 99 在屏幕右上角菜单栏。</p>
         </div>
       </div>
-      <div class="hello-stage" aria-label="月云了提示你先点击他">
-        <div class="hello-bubble">先点我一下。<span>真的只要一下。</span></div>
-        <img src="../pet-preview.png" width="512" height="512" alt="站在桌面上的月云了">
-        <span class="stage-floor">CLICK · DRAG · RIGHT CLICK</span>
-      </div>
     </section>
 
-    <section class="three-step" aria-label="三步上手">
-      <div><span>1</span><strong>下载安装</strong><p>选择 Windows 或 macOS，把月云了放进电脑。</p></div>
-      <div><span>2</span><strong>记住两个右键</strong><p>右键月云了管日常；右键 99 图标找设置和台词工坊。</p></div>
-      <div><span>3</span><strong>开始相处</strong><p>轻点他说话，拖动他换位置，需要功能时右键操作。</p></div>
+    <section class="guide-section two-topics" aria-label="提醒和台词">
+      <article>
+        <h2>提醒</h2>
+        <p>闹钟与计时器可以设倒计时，也可以设每天或工作日重复。到点后，月云了会走到屏幕中间提醒，或者显示全屏提醒。程序退出后，所有提醒都会暂停。</p>
+      </article>
+      <article>
+        <h2>台词</h2>
+        <p>在台词工坊里选择一种情况，就能添加、修改和试听那时会说的话。写完后点“保存并使用”；满意的台词可以再导出一份备份。</p>
+      </article>
     </section>
 
-    <section class="section-block capabilities" aria-labelledby="can-do-title">
-      <header class="section-heading">
-        <h2 id="can-do-title">他能在桌面上做什么</h2>
-        <p>不是一直重复同一个动作。他会看你的互动节奏，也会在你不管他时过自己的生活。</p>
+    <section class="guide-section" aria-labelledby="help-title">
+      <header>
+        <h2 id="help-title">找不到他，或者打不开</h2>
+        <p>先从最简单的地方检查。</p>
       </header>
-      <dl class="capability-list">
-        <div><dt>陪你</dt><dd>轻点会说话，点击太急会躲开、回嘴，最后真的生气。</dd></div>
-        <div><dt>住在桌面</dt><dd>可以拖到顺手的位置；被扔出屏幕后，过一会儿会自己走回来。</dd></div>
-        <div><dt>自己生活</dt><dd>看电脑、玩手机、唱歌、溜达，午饭时间还会做饭和吃饭。</dd></div>
-        <div><dt>管住时间</dt><dd>设置倒计时或闹钟，到点由他亲自走过来，或者直接全屏提醒。</dd></div>
-        <div><dt>说你写的话</dt><dd>在台词工坊里按“发生的情况”改台词，还能试听、回退和叠加朋友的台词。</dd></div>
-        <div><dt>只住本地</dt><dd>台词、提醒和设置默认只保存在这台电脑，不会自动上传。</dd></div>
-      </dl>
-    </section>
-
-    <section class="section-block entry-map-section" aria-labelledby="entry-map-title">
-      <header class="section-heading">
-        <h2 id="entry-map-title">只记住两个右键</h2>
-        <p>一个右键月云了，一个右键 99 图标。大部分功能都从这两个地方开始。</p>
-      </header>
-      <div class="entry-pair">
-        <article class="entry-door pet-entry">
-          <header class="entry-door-header">
-            <span>1</span>
-            <div><h3>右键桌面上的月云了</h3><p>把鼠标移到他身上，点右键。</p></div>
-          </header>
-          <div class="pet-entry-visual" role="img" aria-label="右键点击桌面上的月云了，会出现睡觉、提醒和退出入口">
-            <span class="orbit orbit-sleep">💤</span>
-            <span class="orbit orbit-time">🌙</span>
-            <span class="orbit orbit-quit">×</span>
-            <img src="../pet-preview.png" width="512" height="512" alt="">
-            <strong>在他身上点右键</strong>
-          </div>
-          <p class="entry-door-summary">这里可以让他睡觉或醒来、打开提醒和退出。只有他正在记仇时，菜单才会变成“喂葡萄”。</p>
-        </article>
-
-        <article class="entry-door tray-entry">
-          <header class="entry-door-header">
-            <span>2</span>
-            <div><h3>右键 99 托盘图标</h3><p>看不见月云了、想改设置或台词时，就来这里。</p></div>
-          </header>
-          <div class="tray-identity-row" aria-label="Windows 和 macOS 的 99 图标外观">
-            <div class="tray-identity"><img src="../icon.png" width="52" height="52" alt="Windows 紫色 99 托盘图标"><span><strong>Windows</strong><small>紫色 99</small></span></div>
-            <div class="tray-identity mac"><span class="mac-icon-swatch"><img src="mac-tray-template.png" width="32" height="20" alt="macOS 黑白 99 菜单栏图标"></span><span><strong>macOS</strong><small>黑白小 99</small></span></div>
-          </div>
-          <figure class="tray-proof">
-            <img src="windows-tray-privacy.png" width="1584" height="994" alt="Windows 右下角通知区域中被方框标出的紫色 99 图标；其余桌面内容均已打码">
-            <figcaption>Windows 位置示意：其他桌面内容均已打码，只看方框里的紫色 99。</figcaption>
-          </figure>
-          <dl class="tray-locations">
-            <div><dt>Windows</dt><dd>看屏幕右下角通知区域。没看见时先点 <b>^</b> 展开隐藏图标，再右键紫色 99。</dd></div>
-            <div><dt>macOS</dt><dd>看屏幕右上角菜单栏，在 Wi-Fi、电量和时间附近找到黑白 99，再右键它。触控板用两指点按。</dd></div>
-          </dl>
-          <p class="entry-door-summary">这里可以移回屏幕中央、打开提醒、台词工坊和设置，也能退出。</p>
-        </article>
+      <div class="help-copy">
+        <p><strong>月云了跑丢了</strong><span>右键 99 图标，选择“移回屏幕中央”。</span></p>
+        <p><strong>Windows 拦截安装包</strong><span>确认文件来自本站后，在提示中选择“更多信息”，再选择“仍要运行”。</span></p>
+        <p><strong>macOS 拦截第一次打开</strong><span>确认文件来自本站后，到“系统设置 → 隐私与安全性”选择“仍要打开”。</span></p>
+        <p><strong>仍然有问题</strong><span>打开“设置 → 导出诊断记录”，把生成的文件和看到的现象一起交给开发者。</span></p>
       </div>
     </section>
 
-    <section class="section-block install-section" id="install" aria-labelledby="install-title">
-      <header class="section-heading">
-        <h2 id="install-title">下载与第一次打开</h2>
-        <p>选择你的电脑，下面只显示对应步骤。</p>
-      </header>
-      <div class="platform-tabs" role="tablist" aria-label="选择电脑系统">
-        <button type="button" role="tab" id="guide-tab-windows" aria-selected="true" aria-controls="guide-panel-windows" data-platform-tab="windows">Windows <small>10 / 11</small></button>
-        <button type="button" role="tab" id="guide-tab-macos" aria-selected="false" aria-controls="guide-panel-macos" data-platform-tab="macos">macOS <small>12+</small></button>
-      </div>
-      <div class="platform-guide" id="guide-panel-windows" role="tabpanel" aria-labelledby="guide-tab-windows" data-platform-panel="windows">
-        <ol class="install-path">
-          <li><span>下载</span><p>去下载页选择“Windows 安装版”。不想安装时可以选免安装 ZIP。</p></li>
-          <li><span>安装</span><p>运行安装文件，跟着电脑上的提示完成。若出现系统安全提示，先按下方说明核对来源。</p></li>
-          <li><span>找到入口</span><p>看屏幕右下角通知区域。没看到紫色 99 时先点“^”展开隐藏图标，找到后对它点右键。</p></li>
-        </ol>
-        <aside class="plain-note install-safety" aria-label="Windows 未签名安装包安全说明">
-          <p><strong>为什么显示“未知发布者”？</strong>当前安装包还没有使用 Windows 认可的开发者签名，所以系统无法核实作者身份。这个提示本身不等于检测到了病毒。</p>
-          <p><strong>你需要知道的风险</strong>未签名文件如果被别人修改或重新打包，Windows 很难替你确认它仍是作者发布的原文件。只从本站下载页的按钮获取；不要使用群文件、网盘或转载页面里的副本，也不要为了安装而关闭安全软件。</p>
-          <p><strong>确认来源后怎样打开</strong>若看到“Windows 已保护你的电脑”，可以选择“更多信息”，确认这是你刚从本站下载的月云了安装文件，再选择“仍要运行”。如果安全软件明确报告恶意程序，或者下载地址不对，请停止安装。</p>
-        </aside>
-        <a class="action primary" href="../?platform=windows#download">去下载 Windows 版</a>
-      </div>
-      <div class="platform-guide" id="guide-panel-macos" role="tabpanel" aria-labelledby="guide-tab-macos" data-platform-panel="macos" hidden>
-        <ol class="install-path">
-          <li><span>下载</span><p>去下载页选择“macOS 通用版”。同一个包可以用于 Apple 芯片和 Intel Mac。</p></li>
-          <li><span>安装</span><p>打开 DMG，把“月云了桌宠”拖进“应用程序”。第一次打开时，macOS 可能会先阻止它运行。</p></li>
-          <li><span>找到入口</span><p>看屏幕右上角菜单栏，在 Wi-Fi、电量和时间附近找到黑白 99，右键它；触控板用两指点按。</p></li>
-        </ol>
-        <aside class="plain-note install-safety" aria-label="macOS 未签名安装包安全说明">
-          <p><strong>为什么显示“无法验证开发者”？</strong>当前安装包还没有使用 Apple Developer ID 签名和公证，所以 macOS 无法核实作者，也无法替你确认文件发布后没有被改动。这个提示本身不等于检测到了病毒。</p>
-          <p><strong>你需要知道的风险</strong>选择“仍要打开”会让这一个未经 Apple 验证的 App 运行。只从本站下载页的按钮获取；不要使用群文件、网盘或转载页面里的副本，也不要关闭系统的整体安全保护。</p>
-          <p><strong>确认来源后怎样打开</strong>先在“应用程序”中尝试打开一次并关闭提示；再进入“苹果菜单 → 系统设置 → 隐私与安全性”，向下找到安全性提示，选择“仍要打开”，输入电脑登录密码并确认。macOS 12 中对应位置叫“系统偏好设置 → 安全性与隐私”。</p>
-          <p><strong>这些情况不要继续</strong>如果提示明确写着 App 会损坏电脑、包含恶意软件，或者文件已经损坏，请停止打开并联系作者；不要在终端运行关闭系统安全保护的命令。</p>
-        </aside>
-        <a class="action primary" href="../?platform=macos#download">去下载 macOS 版</a>
-      </div>
-    </section>
-
-    <section class="section-block first-choice" aria-labelledby="first-choice-title">
-      <header class="section-heading">
-        <h2 id="first-choice-title">第一次打开怎么选</h2>
-        <p>欢迎页只有两个主要选择，选错也没关系。</p>
-      </header>
-      <div class="choice-lines">
-        <p><strong>先直接使用</strong><span>马上使用作者准备好的台词。最省事，推荐第一次打开时选这个。</span></p>
-        <p><strong>现在写自己的台词</strong><span>直接进入台词工坊。以后也随时能右键 99 图标打开，不急着现在写。</span></p>
-      </div>
-    </section>
-
-    <section class="section-block basics" aria-labelledby="basics-title">
-      <header class="section-heading">
-        <h2 id="basics-title">建议先做的基础设置</h2>
-        <p>右键 99 图标，再选择“设置”，不需要翻很多选项。</p>
-      </header>
-      <div class="basic-route">
-        <div><strong>开机时自动启动他</strong><p>打开后，下次登录电脑时月云了会一起出现。macOS 也可以在“系统设置 → 通用 → 登录项”里管理。</p></div>
-        <div><strong>查看使用引导</strong><p>不小心关掉了第一次欢迎页，可以从这里重新打开。</p></div>
-        <div><strong>导出诊断记录</strong><p>遇到打不开、窗口异常或提醒不工作时导出，再把文件发给作者。里面没有你的台词和提醒正文。</p></div>
-      </div>
-    </section>
-
-    <section class="guide-next" aria-labelledby="next-title">
+    <section class="guide-end">
       <div>
-        <h2 id="next-title">已经会用了。接下来想怎么玩？</h2>
-        <p>完整手册按动作分类，不用从头读。想查哪个，就直接点哪个。</p>
+        <h2>可以开始了。</h2>
+        <p>忘了入口时，再回来找这一页就够了。</p>
       </div>
-      <a class="action primary" href="features.html">打开完整功能手册</a>
+      <a href="../#download">返回下载页</a>
     </section>
   </main>
 
   <footer class="docs-footer">
-    <p>月云了桌宠 · 正式产品文档</p>
-    <p>个人制作的非官方同人作品 · 请勿用于商业销售</p>
+    <p>个人制作的非官方同人作品，请勿用于商业销售。</p>
   </footer>
-  <script src="docs.js"></script>
 </body>
 </html>
