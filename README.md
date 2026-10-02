@@ -1,6 +1,6 @@
 # tsukumo99-download
 
-「月云了桌宠」Windows 与 macOS 的公开下载页、宣传图与版本文件。
+「霸道桌宠他姓月」Windows 与 macOS 的公开下载页、宣传图与版本文件。
 
 - 下载页：<https://lzl2lzl.github.io/tsukumo99-download/>
 - 快速开始：<https://lzl2lzl.github.io/tsukumo99-download/guide/>

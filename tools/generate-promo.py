@@ -82,7 +82,7 @@ def render(width: int, height: int, output: str) -> None:
     menu_height = round(44 * scale)
     draw.rounded_rectangle((stage[0], stage[1], stage[2], stage[1] + menu_height), radius=round(32 * scale), fill="#21172b")
     draw.rectangle((stage[0], stage[1] + menu_height // 2, stage[2], stage[1] + menu_height), fill="#21172b")
-    draw.text((stage[0] + round(20 * scale), stage[1] + round(11 * scale)), "99   月云了桌宠", font=font(round(12 * scale), True), fill="#d9cce4")
+    draw.text((stage[0] + round(20 * scale), stage[1] + round(11 * scale)), "99   霸道桌宠他姓月", font=font(round(12 * scale), True), fill="#d9cce4")
     draw.text((stage[2] - round(70 * scale), stage[1] + round(11 * scale)), "09:09", font=font(round(12 * scale)), fill="#b7a8c3")
 
     speech = (stage[0] + round(28 * scale), stage[1] + round(78 * scale), stage[2] - round(28 * scale), stage[1] + round(132 * scale))
