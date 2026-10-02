@@ -97,17 +97,10 @@ h1 {
   line-height: 1.04;
 }
 
-.lead {
-  max-width: 28rem;
-  margin: 23px 0 34px;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.85;
-}
-
 .platform-switch {
   display: flex;
   width: min(100%, 460px);
+  margin-top: 34px;
   gap: 24px;
   border-bottom: 1px solid var(--line);
 }
@@ -278,12 +271,6 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
-.guide-link p {
-  margin: 9px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .guide-link a {
   display: inline-flex;
   min-height: 48px;
@@ -370,7 +357,6 @@ footer p { margin: 0; }
   }
 
   h1 { font-size: clamp(48px, 15vw, 66px); }
-  .lead { font-size: 16px; }
   .platform-panel { grid-template-columns: 1fr; }
   .download-button { min-height: 56px; }
 
